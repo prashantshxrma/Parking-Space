@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.parking-status {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: purple;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
+    width: calc(33.33% - 20px);
+    margin: 20px;
+    background-color: black;
+    padding: 20px;
+    border: 1px solid purple;
+}
+
+.spots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spot {
+    width: calc(20% - 10px);
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 24px;
+}
+
+.vacant {
+    background-color: #c6f7d0;
+    color: #3e8e41;
+}
+
+.occupied {
+    background-color: #f7cac9;
+    color: #e67e73;
+}

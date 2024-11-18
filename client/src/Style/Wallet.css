@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.wallet-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: purple;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.balance {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-funds, .view-transactions {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #28a745;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-funds:hover, .view-transactions:hover {
+    background-color: #218838;
+}
+
+.view-transactions {
+    background-color: #007bff;
+}
+
+.view-transactions:hover {
+    background-color: #0069d9;
+}
