@@ -1,0 +1,53 @@
+.booking-container {
+    background-color: #444;
+    color: white;
+    padding: 30px;  /* Increase padding for better spacing */
+    border-radius: 8px;
+    width: 350px;  /* Adjust width for better form fit */
+    margin: 30px auto;  /* Center the container and add margin on top/bottom */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Increase shadow for better visibility */
+}
+
+.booking-container h2 {
+    text-align: center;
+    margin-bottom: 20px;  /* Space below the heading */
+}
+
+.booking-container label {
+    display: block;
+    margin: 12px 0 6px;  /* Increase space around labels */
+}
+
+.booking-container input {
+    width: 100%;
+    padding: 12px;  /* Slightly more padding for inputs */
+    margin-bottom: 12px;  /* More space between input fields */
+    border: 1px solid #666;  /* Add border to inputs for better focus */
+    border-radius: 5px;
+    background-color: #555;  /* Input background color */
+    color: white;  /* Ensure text is readable */
+}
+
+.booking-container input:focus {
+    border-color: #5cb85c;  /* Highlight border on focus */
+    outline: none;  /* Remove default outline */
+}
+
+.booking-container button {
+    width: 100%;
+    padding: 12px;  /* Adjust padding for button */
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;  /* Larger text for the button */
+}
+
+.booking-container button:hover {
+    background-color: #4cae4c;  /* Slightly darker color on hover */
+}
+
+.booking-container button:focus {
+    outline: none;  /* Remove outline on button focus */
+}

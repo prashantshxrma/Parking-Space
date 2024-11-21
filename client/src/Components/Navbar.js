@@ -1,21 +1,18 @@
 import React from 'react';
-import "../Style/Navbar.css"
+import "../Style/Navbar.css";
 
-const Navbar = () => {
-    return (
-        <div>
-<nav>
-  <a href="#" class="home">Brand</a>
-  <ul>
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-    <li><a href="#">Link 4</a></li>
-    <li><a href="#">Profile</a></li>
-  </ul>
-</nav>
-        </div>
-    )
-}
-
-export default Navbar
+export const Navbar = () => {
+  return (
+    <div>
+      <nav className="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#wallet">Wallet</a></li>
+          <li><a href="#profile">My Profile</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  );
+};

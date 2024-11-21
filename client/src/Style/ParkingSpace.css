@@ -1,55 +1,65 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-}
-
-.parking-status {
-    max-width: 800px;
-    margin: 40px auto;
+.parking-space {
+    background-color: #444;
+    color: white;
     padding: 20px;
-    background-color: purple;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.sections {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.section {
-    width: calc(33.33% - 20px);
-    margin: 20px;
-    background-color: black;
-    padding: 20px;
-    border: 1px solid purple;
-}
-
-.spots {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.spot {
-    width: calc(20% - 10px);
-    margin: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: auto;
+    width: 80%; /* Increased width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .parking-space h2 {
     text-align: center;
-    font-size: 24px;
-}
-
-.vacant {
-    background-color: #c6f7d0;
-    color: #3e8e41;
-}
-
-.occupied {
-    background-color: #f7cac9;
-    color: #e67e73;
-}
+  }
+  
+  .parking-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 columns */
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .parking-slot {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s ease;
+  }
+  
+  .parking-slot:hover {
+    transform: scale(1.1);
+  }
+  
+  .parking-slot.available {
+    background-color: #5cb85c; /* Green for available */
+  }
+  
+  .parking-slot.occupied {
+    background-color: #d9534f; /* Red for occupied */
+  }
+  
+  .parking-slot.reserved {
+    background-color: #f0ad4e; /* Yellow for reserved */
+  }
+  
+  .parking-slot span {
+    display: block;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .parking-grid {
+      grid-template-columns: repeat(5, 1fr); /* 5 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .parking-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for very small screens */
+    }
+  }
+  
