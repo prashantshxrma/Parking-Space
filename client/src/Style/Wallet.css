@@ -43,3 +43,13 @@
 .wallet-container button:hover {
     background-color: #4cae4c;
 }
+/* Assuming .wallet-container is the main container for the Wallet section */
+.wallet-container {
+    padding-bottom: 30px;  /* Adds space at the bottom of the wallet container */
+    margin-bottom: 30px;  /* Optional: Adds more space between wallet section and footer */
+}
+
+/* If there's a footer, add some space above it */
+footer {
+    margin-top: 30px;  /* Adds space above the footer */
+}
