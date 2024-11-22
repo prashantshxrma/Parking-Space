@@ -1,35 +1,57 @@
+/*Backend
+    Data we want to show on UI, and that data is changing, we need a way to get that data, create that data, update and delete
+    Entities: CRUD operations
+    UI-Client
+    API-Server
+    1. User - username, email, phone, password, role
+    2. Vehicle - name, type, id
+    3. Booking - user, vehicle, start_date, end_date, status
+
+    backend_uri = 'http://localhost:3000';
+    
+    home -> /
+
+   (POST)User Create : Registration -> /api/users/register   |   /api/vehicles/availability
+   (GET)User Get : Login -> /api/users/login
+   (PUT/PATCH)User Update : Change Password -> api/users/:id
+   (DELETE)User Delete :
+
+    
+*/
 const express = require('express');
-const mongoose = require('mongoose');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const authRoutes = require('./routes/authRoutes');
-const bookingRoutes = require('./routes/bookingRoutes');
-const walletRoutes = require('./routes/walletRoutes');
-const userRoutes = require('./routes/userRoutes');
-const adminRoutes = require('./routes/adminRoutes');
-const { errorHandler } = require('./middleware/errorMiddleware');
 
 const app = express();
-const port = process.env.PORT || 3000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(morgan('dev')); // Logging middleware
+//adding services: part of code that helps our api +-> Middlewares
+app.use(express.json()); 
+//Routes Configuration
+//app.use('/api', routes);
 
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/parkingDB', { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Use routes
-app.use('/api/auth', authRoutes);
-app.use('/api/bookings', bookingRoutes);
-app.use('/api/wallets', walletRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/admin', adminRoutes);
-
-// Error handling middleware
-app.use(errorHandler);
-
-// Start the server
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.post('/api/users/register', (request, response)=>{
+    const { username, email, phone, password, role } = request.body; //username = request.body.username -> {username} = req.body
+    
+    //check if user already exists
+    //if not, then create the user
+    //if yes, then return an error message
+    const isExists = true;
+    if(isExists) response.status(404).send({message: 'account already exists'});
+    try{
+    const newUser = {
+        username,
+        email,
+        phone,
+        password,
+        
+    }
+    //save the user to the database
+    // save(newUser);
+    response.status(201).send({message:"user created successfully"});
+}catch(err){
+    response.status(500).send({message: err.message});
+}
 });
+//Controller Configuration
+
+app.listen(4000, () => {
+    console.log('Server is running on port 3000');
+})
